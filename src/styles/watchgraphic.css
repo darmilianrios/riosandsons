@@ -65,14 +65,12 @@ body {
   width: 72px;
   left: -2px;
   position: absolute;
-  background-color: #fff;
 }
 .watch-strap .strap-circle:before {
   content: "";
   display: block;
   height: 100%;
   width: 72px;
-  background-color: #fff;
   position: absolute;
   right: -2px;
 }
@@ -409,11 +407,11 @@ i:nth-child(59) {
 i:nth-child(60) {
   transform: rotate(360deg) translate(0, -172px);
 }
-/* marker */
+
 .watch-week {
   position: absolute;
-  top: calc(50% - 6px);
-  left: calc(50% - 6px);
+  top: calc(50%);
+  left: calc(50%);
   transform: translate(-120px, 40px) rotate(-70deg);
   z-index: 10;
 }
@@ -424,7 +422,7 @@ i:nth-child(60) {
   transform: rotate(256deg);
 }
 .watch-week.days ul {
-  transform: rotate(169deg) translate(-58px, -17px);
+  transform: rotate(169deg) translate(-58px, -35px);
 }
 .watch-week.days div {
   color: #1f1f21;
@@ -439,7 +437,7 @@ i:nth-child(60) {
   transform: rotate(160deg) translate(0, -37px);
 }
 .watch-week.days .week-arrow {
-  transform: rotate(115deg) translate(35px, -8px);
+  transform: rotate(115deg) translate(30px, -30px);
 }
 .watch-week:after {
   content: "";
@@ -454,11 +452,46 @@ i:nth-child(60) {
   left: -2px;
   top: -28px;
 }
+.weekday-arrow {
+  position: absolute;
+  top: 22px;
+  left: 48px;
+  transform-origin: 1px 1px;
+  width: 35px;
+  height: 2px;
+  background-color: #0f1743;
+  z-index: 5;
+}
+.weekday-arrow:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 14px;
+  width: 14px;
+  background-color: #ff5456;
+  border-radius: 50%;
+  left: -6px;
+  top: -6px;
+  z-index: -1;
+}
+.weekday-arrow:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 10px;
+  background-color: #0f1743;
+  border-radius: 50%;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
 .watch-week .week-arrow {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(19px, 21px) rotate(22deg);
+  transform: translate(35px, 25px);
   width: 45px;
   height: 2px;
   background-color: #0f1743;
@@ -495,6 +528,15 @@ i:nth-child(60) {
   display: block;
   color: #d6d6d3;
 }
+.watch-week ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(40px, 17px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .watch-week div:nth-child(1) {
   transform: rotate(0) translate(0, -45px);
 }
@@ -512,7 +554,6 @@ i:nth-child(60) {
 }
 .watch-week div:nth-child(6) {
   transform: rotate(125deg) translate(0, -45px);
-  color: #ff5456;
 }
 .watch-week div:nth-child(7) {
   transform: rotate(150deg) translate(0, -45px);
@@ -553,7 +594,7 @@ i:nth-child(60) {
 }
 /* White (minute) hand */
 .hours {
-  width: 190px;
+  width: 180px;
   height: 6px;
   position: absolute;
   top: calc(50% - 3px);
@@ -569,8 +610,8 @@ i:nth-child(60) {
   content: "";
   display: block;
   position: absolute;
-  left: 23px;
-  top: -5px;
+  left: 22px;
+  top: -4px;
   height: 14px;
   width: 14px;
   background-color: #fff;
@@ -732,7 +773,7 @@ i:nth-child(60) {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(46%, -49%);
   background-color: #1341d1;
   -webkit-animation: 8s day-bg infinite;
   animation: 8s day-bg infinite;

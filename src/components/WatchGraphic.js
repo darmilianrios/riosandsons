@@ -1,6 +1,40 @@
 import * as React from "react"
 import "../styles/watchgraphic.css"
 const WatchGraphic = () => {
+  // Function to format the current date as "DD MMM"
+  const formatDate = () => {
+    const date = new Date()
+    const day = date.getDate()
+    const month = date
+      .toLocaleString("default", { month: "short" })
+      .toUpperCase()
+    return `${day} ${month}`
+  }
+
+  const getCurrentDayIndex = () => {
+    const date = new Date()
+    return date.getDay()
+  }
+
+  const dayIndex = getCurrentDayIndex()
+  const days = ["S", "M", "T", "W", "T", "F", "S"]
+
+  const getDayOfWeek = () => {
+    const date = new Date()
+    const dayIndex = date.getDay()
+    const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+    return days[dayIndex]
+  }
+  const calculateRotation = () => {
+    const date = new Date()
+    const dayIndex = date.getDay() // 0 for Sunday, 1 for Monday, etc.
+    return -101 + dayIndex * 27 // -101 degrees for Sunday, then +27 for every additional day
+  }
+
+  const rotationStyle = {
+    transform: `rotate(${calculateRotation()}deg)`,
+  }
+
   return (
     <div className="relative">
       <div className="watch-strap">
@@ -93,21 +127,24 @@ const WatchGraphic = () => {
             <span className="minutes"></span>
             <span className="seconds"></span>
           </div>
-          <div className="watch-date">17 SEP</div>
+          <div className="watch-date">{formatDate()}</div>
           <div className="watch-alert">
-            Your meeting <br />
-            in <strong>15</strong> min
+            Master <br />
+            <strong>Watchmaker</strong>
           </div>
           <div className="watch-week">
-            <span className="week-arrow"></span>
+            <span style={rotationStyle} className="weekday-arrow "></span>
             <ul>
-              <div>S</div>
-              <div>M</div>
-              <div>T</div>
-              <div>W</div>
-              <div>T</div>
-              <div>F</div>
-              <div>S</div>
+              {days.map((day, index) => (
+                <div
+                  key={index}
+                  style={{
+                    color: index === dayIndex ? "#ff5456" : " #BBB ",
+                  }}
+                >
+                  {day}
+                </div>
+              ))}
             </ul>
           </div>
           <div className="watch-day">

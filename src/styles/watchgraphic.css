@@ -23,8 +23,8 @@ body {
 }
 .watch-center {
   background-image: radial-gradient(#fff, #eeeeef);
-  height: 380px;
-  width: 380px;
+  height: 375px;
+  width: 375px;
   border-radius: 50%;
   position: absolute;
   z-index: 4;
@@ -45,12 +45,12 @@ body {
   width: 220px;
   background-color: #101022;
   border-radius: 6px;
-  z-index: 2;
+  z-index: 0;
 }
 .watch-strap .strap-circle {
   position: absolute;
-  height: 409px;
-  width: 409px;
+  height: 400px;
+  width: 400px;
   background-color: transparent;
   top: 50%;
   left: 50%;

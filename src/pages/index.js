@@ -9,8 +9,8 @@ const IndexPage = () => {
         <div className="md:-translate-x-8 w-[400px] aspect-square">
           <WatchGraphic />
         </div>
-        <div className="text-[#E1B900] gap-4 text-center flex justify-center items-center flex-col py-10 md:py-0 w-full">
-          <RASLogo className={"w-10/12 mx-auto"} />
+        <div className="text-[#E1B900] gap-4 text-center flex justify-center items-center flex-col py-10 md:py-0 w-full ">
+          <RASLogo className={"w-10/12 mx-auto pt-10 md:pt-0"} />
           <h2>Coming Soon</h2>
         </div>
       </div>
